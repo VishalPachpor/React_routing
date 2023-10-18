@@ -7,6 +7,7 @@ import Home from '../components/Home/home.jsx'
 import Layout from './Layout.jsx'
 import About from '../components/About/About.jsx'
 import Contact from './components/Contact/Contact'
+import User from './components/User/User'
 
 
 // 1st method for routes
@@ -33,12 +34,14 @@ import Contact from './components/Contact/Contact'
 // ])
 
 // 2nd method for routes
+// on line 43 taking value from the url and displaying it in the user component
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
     <Route path='' element={<Home />} />
     <Route path='/about' element={<About />} />
     <Route path='/contact' element={<Contact />} />
+    <Route path='user/id:userid' element={<User />} />
     </Route>
   )
 )
